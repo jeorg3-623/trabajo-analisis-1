@@ -20,6 +20,9 @@
                         {{ __('Usuarios y Roles') }}
                     </x-nav-link>
                     @endhasanyrole
+                    <x-nav-link :href="route('tutorial')" :active="request()->routeIs('tutorial')">
+                        {{ __('Guía Técnica') }}
+                    </x-nav-link>
 
                         
 
