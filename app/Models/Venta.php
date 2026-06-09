@@ -9,4 +9,11 @@ class Venta extends Model
 {
     /** @use HasFactory<\Database\Factories\VentaFactory> */
     use HasFactory;
+    protected $fillable = [
+        'cliente_id',
+        'producto_id',
+        'cantidad',
+        'precio_unitario',
+        'total',
+    ];
 }
