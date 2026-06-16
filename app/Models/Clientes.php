@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Comprobantes;
 
 class Clientes extends Model
 {
@@ -14,4 +15,9 @@ class Clientes extends Model
         'email',
         'telefono',
     ];
+
+    public function comprobantes()
+    {
+        return $this->hasMany(Comprobantes::class, 'cliente_id');
+    }
 }

@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use app\Models\Cliente;
 
-class Producto extends Model
+class Provincia extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProductoFactory> */
+    /** @use HasFactory<\Database\Factories\ProvinciaFactory> */
     use HasFactory;
     protected $fillable = [
         'nombre',
-        'descripcion',
-        'precio',
+        'municipio',
+        'codigo_postal',
+        'departamento/partido',
     ];
 }

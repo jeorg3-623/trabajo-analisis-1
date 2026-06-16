@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Producto;
+use App\Models\Comprobantes;
 
 class Sucursal extends Model
 {
@@ -14,4 +15,9 @@ class Sucursal extends Model
         'nombre_sucursal',
         'direccion_sucursal',
     ];
+
+    public function comprobantes()
+    {
+        return $this->hasMany(Comprobantes::class, 'sucursal_id');
+    }
 }
