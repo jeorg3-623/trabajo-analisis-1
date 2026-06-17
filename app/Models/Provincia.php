@@ -16,4 +16,10 @@ class Provincia extends Model
         'codigo_postal',
         'departamento/partido',
     ];
+
+    public function facturas()
+    {
+        return $this->hasMany(Facturas::class, 'provincia_id');
+    }
+    
 }

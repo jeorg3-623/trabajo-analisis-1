@@ -23,4 +23,5 @@ class Proveedor extends Model
     {
         return $this->hasMany(Comprobantes::class, 'proveedor_id');
     }
+    
 }

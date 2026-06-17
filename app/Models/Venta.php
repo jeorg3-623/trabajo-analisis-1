@@ -16,4 +16,14 @@ class Venta extends Model
         'precio_unitario',
         'total',
     ];
+
+    public function cliente()
+    {
+        return $this->belongsTo(Clientes::class, 'cliente_id');
+    }
+
+    public function producto()
+    {
+        return $this->belongsTo(Producto::class, 'producto_id');
+    }
 }

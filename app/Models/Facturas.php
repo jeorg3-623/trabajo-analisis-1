@@ -18,4 +18,9 @@ class Facturas extends Model
         'fecha_vencimiento',
         'estado',
     ];
+
+    public function cliente()
+    {
+        return $this->belongsTo(Clientes::class, 'cliente_id');
+    }
 }

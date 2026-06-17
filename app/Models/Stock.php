@@ -15,4 +15,10 @@ class Stock extends Model
         'sucursal_id',
         'cantidad',
     ];
+
+    public function producto()
+    {
+        return $this->belongsTo(Producto::class, 'producto_id');
+    }
+    
 }

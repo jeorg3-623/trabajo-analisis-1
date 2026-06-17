@@ -15,4 +15,9 @@ class Producto extends Model
         'descripcion',
         'precio',
     ];
+
+    public function detalleComprobantes()
+    {
+        return $this->hasMany(Detalle_comprobantes::class, 'producto_id');
+    }
 }
