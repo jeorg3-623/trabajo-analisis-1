@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Clientes;
+use App\Models\Proveedor;
+use App\Models\Sucursal;
 
 class Comprobantes extends Model
 {

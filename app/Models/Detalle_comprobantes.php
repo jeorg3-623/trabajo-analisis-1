@@ -15,4 +15,10 @@ class Detalle_comprobantes extends Model
         'cantidad',
         'precio_unitario',
     ];
+
+    public function comprobante()
+    {
+        return $this->belongsTo(Comprobantes::class, 'comprobante_id');
+        
+    }
 }

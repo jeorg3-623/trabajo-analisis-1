@@ -4,9 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Producto;
 
 class Categorias extends Model
 {
     /** @use HasFactory<\Database\Factories\CategoriasFactory> */
     use HasFactory;
+    protected $fillable = [
+        'nombre_categoria',
+        'descripcion_categoria',
+    ];
+
+    public function productos()
+    {
+        return $this->hasMany(Producto::class, 'categoria_id');
+    }
 }
