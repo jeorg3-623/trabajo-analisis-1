@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('telefono_proveedor', 20);
             $table->string('direccion_proveedor', 255)->unique();
             $table->string('cuit_proveedor', 11)->unique();
-            $table->string('categoria_proveedor', 50);
+            $table->string('categoria_proveedor', 50)->unique;
             $table->timestamps();
             });
     }
