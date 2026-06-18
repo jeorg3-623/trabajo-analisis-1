@@ -17,9 +17,10 @@ return new class extends Migration
             $table->string('email_proveedor', 100);
             $table->string('telefono_proveedor', 20);
             $table->string('direccion_proveedor', 255)->unique();
-            $table->integer('cuit_proveedor', 50);
+            $table->string('cuit_proveedor', 11)->unique();
+            $table->string('categoria_proveedor', 50);
             $table->timestamps();
-        });
+            });
     }
 
     /**
@@ -28,5 +29,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('proveedors');
+        
     }
 };

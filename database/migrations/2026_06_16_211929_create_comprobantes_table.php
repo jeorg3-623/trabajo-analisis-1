@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('comprobantes', function (Blueprint $table) {
             $table->id();
+            $table->string('vendedor_id', 100);
             $table->string('tipo', 30)->default('factura');
             $table->string('serie', 20)->nullable();
             $table->string('numero', 50);

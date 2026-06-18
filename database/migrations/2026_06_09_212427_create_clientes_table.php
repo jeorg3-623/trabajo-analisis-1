@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('direccion', 255 );
             $table->string('email')->unique();
             $table->string('telefono/celular', 13);
+            $table->string('cuit', 11)->unique();
+            $table->string('minorista', 3);
+            $table->string('mayorista', 3);
             $table->timestamps();
         });
     }

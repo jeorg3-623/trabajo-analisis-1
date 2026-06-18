@@ -16,6 +16,10 @@ return new class extends Migration
             $table->foreignId('cliente_id')->constrained()->onDelete('cascade');
             $table->foreignId('producto_id')->constrained()->onDelete('cascade');
             $table->integer('cantidad');
+            $table->date('fecha_venta');
+            $table->string('forma_pago', 50);
+            $table->string('estado', 50)->default('pendiente');
+            $table->string('canal (local/online)', 50);
             $table->decimal('precio_unitario', 10, 2);
             $table->decimal('total', 10, 2);
             $table->timestamps();

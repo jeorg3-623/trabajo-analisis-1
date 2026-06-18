@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('nombre', 100);
             $table->string('descripcion', 255);
             $table->decimal('precio', 8, 2);
-            $table->string('marca', 50);
+            $table->string('marcas_id', 50);
             $table->integer('talle');
+            $table->integer('color', 7);
+            $table->integer('categoria_id')->nullable()->constrained('categorias')->nullOnDelete();
             $table->timestamps();
         });
     }
