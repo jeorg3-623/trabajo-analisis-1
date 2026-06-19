@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\Models\DetalleComprobantes;
+use Illuminate\Support\Facades\DB;
+use App\Models\DetalleComprobantes;
 class DetalleComprobantesSeeder extends Seeder
 {
     /**
@@ -12,7 +13,7 @@ class DetalleComprobantesSeeder extends Seeder
      */
     public function run(): void
     {
-        \DB::table('detalle_comprobantes')->insert([
+        DB::table('detalle_comprobantes')->insert([
             [
                 'comprobante_id' => 1,
                 'producto_id' => 1,

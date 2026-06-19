@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\Models\Provincia;
+use Illuminate\Support\Facades\DB;
+use App\Models\Provincia;
 
 class ProvinciaSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class ProvinciaSeeder extends Seeder
      */
     public function run(): void
     {
-        \DB::table('provincias')->insert([
+        DB::table('provincias')->insert([
             [
                 'nombre' => 'Provincia 1',
                 'municipio' => 'Municipio 1',

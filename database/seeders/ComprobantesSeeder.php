@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\Models\Comprobantes;
+use Illuminate\Support\Facades\DB;
+use App\Models\Comprobantes;
 
 class ComprobantesSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class ComprobantesSeeder extends Seeder
      */
     public function run(): void
     {
-        \DB::table('comprobantes')->insert([
+        DB::table('comprobantes')->insert([
             [
                 'numero_comprobante' => 'COMP-001',
                 'fecha_emision' => '2024-06-18',

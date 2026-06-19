@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use app\Models\Marcas;
 
 class MarcasSeeder extends Seeder
@@ -13,7 +14,7 @@ class MarcasSeeder extends Seeder
      */
     public function run(): void
     {
-        \DB::table('marcas')->insert([
+        DB::table('marcas')->insert([
             [
                 'nombre_marca' => 'Nike',
                 'descripcion_marca' => 'Marca deportiva reconocida mundialmente.',

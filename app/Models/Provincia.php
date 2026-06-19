@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use app\Models\Cliente;
+use App\Models\Factura;
+// Refer to related models by fully-qualified class names to avoid unresolved import errors
 
 class Provincia extends Model
 {
@@ -14,12 +15,12 @@ class Provincia extends Model
         'nombre',
         'municipio',
         'codigo_postal',
-        'departamento/partido',
+        'departamento_partido',
     ];
 
     public function facturas()
     {
-        return $this->hasMany(Facturas::class, 'provincia_id');
+        return $this->hasMany(Factura::class, 'provincia_id');
     }
     
 }

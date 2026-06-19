@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\Models\Compras;
+use Illuminate\Support\Facades\DB;
+use App\Models\Compras;
 
 class ComprasSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class ComprasSeeder extends Seeder
      */
     public function run(): void
     {
-        \DB::table('compras')->insert([
+        DB::table('compras')->insert([
             [
                 'numero_compra' => 'COMPRA-001',
                 'fecha_compra' => '2024-06-18',
