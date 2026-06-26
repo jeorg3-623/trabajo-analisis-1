@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use app\Models\Cliente;
-class Detalle_comprobantes extends Model
+class Detalle_comprobante extends Model
 {
     /** @use HasFactory<\Database\Factories\DetalleComprobantesFactory> */
     use HasFactory;

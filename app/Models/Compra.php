@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Comprobantes;
 
-class Compras extends Model
+class Compra extends Model
 {
     /** @use HasFactory<\Database\Factories\ComprasFactory> */
     use HasFactory;

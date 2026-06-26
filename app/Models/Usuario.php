@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Comprobantes;
 
-class Usuarios extends Model
+class Usuario extends Model
 {
     /** @use HasFactory<\Database\Factories\UsuariosFactory> */
     use HasFactory;

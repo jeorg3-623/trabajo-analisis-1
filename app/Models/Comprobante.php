@@ -8,7 +8,7 @@ use App\Models\Clientes;
 use App\Models\Proveedor;
 use App\Models\Sucursal;
 
-class Comprobantes extends Model
+class Comprobante extends Model
 {
     /** @use HasFactory<\Database\Factories\ComprobantesFactory> */
     use HasFactory;
