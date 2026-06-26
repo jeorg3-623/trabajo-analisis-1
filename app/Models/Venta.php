@@ -13,8 +13,8 @@ class Venta extends Model
         'cliente_id',
         'producto_id',
         'cantidad',
-        'precio_unitario',
-        'total',
+        'comprobante_id',
+        'total_venta',
     ];
 
     public function cliente()
@@ -22,8 +22,15 @@ class Venta extends Model
         return $this->belongsTo(Clientes::class, 'cliente_id');
     }
 
-    public function producto()
+    public function empleado()
     {
-        return $this->belongsTo(Producto::class, 'producto_id');
+        return $this->belongsTo(Usuario::class, 'Usuario_id');
+    
+    }
+
+    public function comprobante(){
+
+        return$this->belongsTo(Comprobante::class, 'comprobante_id')
+
     }
 }

@@ -18,8 +18,17 @@ class Usuario extends Model
         'sucursal_id',
     ];
 
-    public function comprobantes()
+    public function sucursal()
     {
-        return $this->hasMany(Comprobantes::class, 'usuario_id');
+        return $this->belongsTo(Sucursal::class, 'sucursal_id');
     }
+
+    public function ventas(){
+        return $this->hasMany(Venta::class, 'usuario_id')
+    }
+    
+    public function compras(){
+        return $this->hasMany(Compra::class, 'usuario_id')
+    }
+
 }

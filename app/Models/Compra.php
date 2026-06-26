@@ -11,15 +11,24 @@ class Compra extends Model
     /** @use HasFactory<\Database\Factories\ComprasFactory> */
     use HasFactory;
     protected $fillable = [
-        'numero_compra',
-        'fecha_compra',
+        'proveedor_id',
+        'usuario_id',
+        'comprobante_id',
         'total_compra',
-        'forma_pago',
     ];
 
-    public function comprobantes()
+    public function Proveedor()
     {
-        return $this->hasMany(Comprobantes::class, 'compra_id');
+        return $this->belongTo(Proveedor::class, 'proveedor_id');
     }
 
+    public function empleado()
+    {
+        return $this->belongsTo(Ususario::class, 'usuario_id')
+    }
+
+    public function comprobante()
+    {
+        return $this->belongsTo(Comprobante::class, 'comprobante_id')
+    }
 }
